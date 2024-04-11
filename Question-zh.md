@@ -5,6 +5,7 @@
 - react-native@0.72.5
 
 - npx react-native info
+
 ```
 System:
   OS: macOS 14.2.1
@@ -97,7 +98,7 @@ iOS:
 | 19   | 浮层隐藏后，浮层容器没有销毁                                                                                                                 |           |      |
 | 20   | IOS Animated.timing 设置 useNativeDriver:true 后，内嵌按钮无法点击                                                                           |           |      |
 | 21   | Android 路由组件设置 view.setNativeProps({renderToHardwareTextureAndroid: true})，跳转下一个页面（包含 Fabric 组件）页面漂移出屏幕，无法点击 |           |      |
-| 22   | IOS TouchableOpacity 内嵌 Aminated.View ，Aminated.View 开启动画变更位置后，无法点击                                                         |           |      |
+| 22   | IOS TouchableOpacity 内嵌 Aminated.View ，Aminated.View 开启动画变更位置后，无法点击                                                         | 已复现    |      |
 | 23   | 样式中使用了 zIndex 属性层级可能不生效,尝试添加 position:relative 属性后生效                                                                 |           |      |
 | 24   | 组件需要设置默认高宽，不然布局展示可能发生截断                                                                                               |           |      |
 | 25   | TextInput.defaultProps 值为 undefined                                                                                                        |           |      |
@@ -107,4 +108,5 @@ iOS:
 | 29   | FlatList、ScrollView stickyHeaderIndices 吸顶功能多次滑动后失效                                                                              |           |      |
 | 30   | Aminated.View 、Animated.ScrollView 、layoutAnimation 动画卡顿                                                                               |           |      |
 | 31   | 安卓 FlatList 调用 scrollToOffset，flatList 滚动卡顿。                                                                                       |           |      |
-| 32   | TextInput 属性 maxLength 在 android 上不生效                                                                                                 |           |      |
+| 32   | TextInput 属性 maxLength 在 android 上不生效                                                                                                 | 未能复现  |      |
+| 33   | 如果一个屏幕中有两个 scrolliview，那么有动画的 scrollivew 动画失效                                                                           | 已复现    |      |

@@ -23,12 +23,32 @@ Navigation.registerComponent(
 Navigation.registerComponent(
   'ModalOverModal',
   () => require('./src/pages/ModalOverModal').default,
-)
+);
 
 Navigation.registerComponent(
   'FlatlistInScrollview',
   () => require('./src/pages/FlatlistInScrollview').default,
-)
+);
+
+Navigation.registerComponent(
+  'TextInputInvalid',
+  () => require('./src/pages/TextInputInvalid').default,
+);
+
+Navigation.registerComponent(
+  'AnimatedTranslate',
+  () => require('./src/pages/AnimatedTranslate').default,
+);
+
+Navigation.registerComponent(
+  'TextInView',
+  () => require('./src/pages/TextInView').default,
+);
+
+Navigation.registerComponent(
+  'StickyHeaderIndices',
+  () => require('./src/pages/StickyHeaderIndices').default,
+);
 
 Navigation.events().registerAppLaunchedListener(() => {
   Navigation.setRoot({
