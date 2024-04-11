@@ -33,6 +33,51 @@ const Index = props => {
           }
         />
       </View>
+      <View style={{marginTop: 20}}>
+        <Button
+          title="SectionListRefInvlid"
+          onPress={() =>
+            Navigation.push(props.componentId, {
+              component: {
+                name: 'SectionListRefInvlid',
+                passProps: {
+                  text: 'Pushed screen',
+                },
+              },
+            })
+          }
+        />
+      </View>
+      <View style={{marginTop: 20}}>
+        <Button
+          title="ModalOverModal"
+          onPress={() =>
+            Navigation.push(props.componentId, {
+              component: {
+                name: 'ModalOverModal',
+                passProps: {
+                  text: 'Pushed screen',
+                },
+              },
+            })
+          }
+        />
+      </View>
+      <View style={{marginTop: 20}}>
+        <Button
+          title="FlatlistInScrollview"
+          onPress={() =>
+            Navigation.push(props.componentId, {
+              component: {
+                name: 'FlatlistInScrollview',
+                passProps: {
+                  text: 'Pushed screen',
+                },
+              },
+            })
+          }
+        />
+      </View>
     </View>
   );
 };

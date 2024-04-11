@@ -15,6 +15,16 @@ Navigation.registerComponent(
   () => require('./src/pages/FlatListStuckAndStopped').default,
 );
 
+Navigation.registerComponent(
+  'SectionListRefInvlid',
+  () => require('./src/pages/SectionListRefInvlid').default,
+);
+
+Navigation.registerComponent(
+  'ModalOverModal',
+  () => require('./src/pages/ModalOverModal').default,
+)
+
 Navigation.events().registerAppLaunchedListener(() => {
   Navigation.setRoot({
     root: {
