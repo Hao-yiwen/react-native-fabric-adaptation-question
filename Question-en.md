@@ -1,48 +1,48 @@
-# react-native 新架构适配问题
+# React Native New Architecture Adaptation Issues
 
-## 前置条件
+## Preconditions
 
 - react-native@0.72.5
 
-## 背景
+## Background
 
-在 2024 年 4 月初进行了 ReactNative 新架构适配，但是在适配新架构的时候发现一些难解问题。此文档用来记录 RN 新架构适配常见问题。
+In early April 2024, the adaptation to the new architecture of React Native was undertaken, but some difficult issues were encountered during the adaptation process. This document is intended to record common issues with RN new architecture adaptation.
 
-## 问题梳理
+## Problem Summary
 
-| 序号 | 问题                                                                                                                                         | demo 链接 | 描述 |
-| ---- | -------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ---- |
-| 1    | Animated.Scrollview 中使用 measureLayout 会失效                                                                                              |           |      |
-| 2    | Animated.Scrollview 卡顿问题                                                                                                                 |           |      |
-| 3    | sectionLoist 获取的 ref 无法进行 ref.measure                                                                                                 |           |      |
-| 4    | zindex 为-1 导致的 ios 应用崩溃 https://github.com/facebook/react-native/issues/40736                                                        |           |      |
-| 5    | 安卓机字体加粗被截断                                                                                                                         |           |      |
-| 6    | LayoutAnimation 在 Ios 不生效问题                                                                                                            |           |      |
-| 7    | 当父容器为 View，子元素 Text 的 fontWeight 为 bold 的时候，子元素 Text 的文字会换行，如果父容器再加上 alignItems: 'center'，Text 就会被吃字  |           |
-| 8    | 请求发送失败问题（应该还是和 animated 有关）                                                                                                 |           |      |
-| 9    | FlatList 属性 stickyHeaderIndices 吸顶功能，刚进页面几率正常，再滑动几次就失效了                                                             |           |      |
-| 10   | Animated.FlatList 滑动不流畅，很卡顿                                                                                                         |           |      |
-| 11   | 在 ScrollView 滑动后，点击勾选组件，ScrollVIew 会闪动                                                                                        |           |      |
-| 12   | ScrollView 里面用了一个横向的 FlatList，在 FlatList 滚动的时候 setState，ScrollView 会被滚动                                                 |           |      |
-| 13   | 多个 Modal 覆盖会卡死                                                                                                                        |           |      |
-| 14   | 字体截断问题                                                                                                                                 |           |      |
-| 15   | 先设置 borderColor 后设置的 borderTopColor 无效 https://github.com/facebook/react-native/issues/38335                                        |           |      |
-| 16   | 在 ios17.3.1 中 fontWeight 失效                                                                                                              |           |      |
-| 17   | LottieAnimation 在 ios 异常                                                                                                                  |           |      |
-| 18   | measure 的结果可能异常                                                                                                                       |           |      |
-| 19   | 浮层隐藏后，浮层容器没有销毁                                                                                                                 |           |      |
-| 20   | IOS Animated.timing 设置 useNativeDriver:true 后，内嵌按钮无法点击                                                                           |           |      |
-| 21   | Android 路由组件设置 view.setNativeProps({renderToHardwareTextureAndroid: true})，跳转下一个页面（包含 Fabric 组件）页面漂移出屏幕，无法点击 |           |      |
-| 22   | IOS TouchableOpacity 内嵌 Aminated.View ，Aminated.View 开启动画变更位置后，无法点击                                                         |           |      |
-| 23   | 样式中使用了 zIndex 属性层级可能不生效,尝试添加 position:relative 属性后生效                                                                 |           |      |
-| 24   | 组件需要设置默认高宽，不然布局展示可能发生截断                                                                                               |           |      |
-| 25   | TextInput.defaultProps 值为 undefined                                                                                                        |           |      |
-| 26   | IOS Image 样式设置 borderRadius 显示不全                                                                                                     |           |      |
-| 27   | IOS minimumFontScale maxFontSizeMultiplier 不生效                                                                                            |           |      |
-| 28   | Aminated.View 内嵌 Modal 组件，内部 TouchableOpacity 点击不响应                                                                              |           |      |
-| 29   | FlatList、ScrollView stickyHeaderIndices 吸顶功能多次滑动后失效                                                                              |           |      |
-| 30   | Aminated.View 、Animated.ScrollView 、layoutAnimation 动画卡顿                                                                               |           |      |
-| 31   | 安卓 FlatList 调用 scrollToOffset，flatList 滚动卡顿。                                                                                       |           |      |
-| 32   | TextInput 属性 maxLength 在 android 上不生效                                                                                                 |           |      |
+| No. | Issue                                                                                                                                   | Demo Link | Description |
+| --- | --------------------------------------------------------------------------------------------------------------------------------------- | --------- | ----------- |
+| 1   | `measureLayout` becomes ineffective in Animated.ScrollView                                                                              |           |             |
+| 2   | Animated.ScrollView stuttering issues                                                                                                   |           |             |
+| 3   | `ref` obtained from sectionList cannot perform `ref.measure`                                                                            |           |             |
+| 4   | iOS app crash due to zindex being -1 [link](https://github.com/facebook/react-native/issues/40736)                                      |           |             |
+| 5   | Android bold fonts being truncated                                                                                                      |           |             |
+| 6   | `LayoutAnimation` not effective on iOS                                                                                                  |           |             |
+| 7   | When the parent container is a View and the child element Text has `fontWeight` set to bold, the Text wraps. If `alignItems: center`... |           |             |
+| 8   | Request sending failure issue (likely related to animated)                                                                              |           |             |
+| 9   | `stickyHeaderIndices` feature of FlatList, initially works upon entering the page, fails after several scrolls                          |           |             |
+| 10  | Animated.FlatList scrolling is not smooth, very stuttering                                                                              |           |             |
+| 11  | After scrolling in ScrollView, clicking on a checkbox component causes ScrollView to flicker                                            |           |             |
+| 12  | ScrollView containing a horizontal FlatList, when scrolling in FlatList triggers setState, ScrollView scrolls                           |           |             |
+| 13  | Multiple Modals overlay causes freeze                                                                                                   |           |             |
+| 14  | Font truncation issue                                                                                                                   |           |             |
+| 15  | `borderTopColor` becomes ineffective after setting `borderColor` first [link](https://github.com/facebook/react-native/issues/38335)    |           |             |
+| 16  | `fontWeight` ineffective on iOS 17.3.1                                                                                                  |           |             |
+| 17  | LottieAnimation abnormal on iOS                                                                                                         |           |             |
+| 18  | Possible abnormal results from `measure`                                                                                                |           |             |
+| 19  | After the overlay is hidden, the overlay container is not destroyed                                                                     |           |             |
+| 20  | iOS Animated.timing with `useNativeDriver: true`, the embedded button cannot be clicked                                                 |           |             |
+| 21  | Android route component sets `view.setNativeProps({renderToHardwareTextureAndroid: true})`, navigating to the next page...              |           |             |
+| 22  | iOS TouchableOpacity embedding Animated.View, after Animated.View starts animation to change position, it cannot be clicked             |           |             |
+| 23  | zIndex property in styles may not take effect, try adding `position: relative` property to take effect                                  |           |             |
+| 24  | Components need to set default width and height, otherwise layout display may get truncated                                             |           |             |
+| 25  | `TextInput.defaultProps` value is `undefined`                                                                                           |           |             |
+| 26  | iOS Image style setting `borderRadius` not fully displayed                                                                              |           |             |
+| 27  | iOS `minimumFontScale` `maxFontSizeMultiplier` not effective                                                                            |           |             |
+| 28  | Animated.View embedding Modal component, internal TouchableOpacity click does not respond                                               |           |             |
+| 29  | `stickyHeaderIndices` feature of FlatList, ScrollView fails after multiple scrolls                                                      |           |             |
+| 30  | Animated.View, Animated.ScrollView, `layoutAnimation` animation stuttering                                                              |           |             |
+| 31  | Android FlatList calling `scrollToOffset`, FlatList scrolling stuttering.                                                               |           |             |
+| 32  | `maxLength` attribute of TextInput not effective on Android                                                                             |           |             |
 
-## 问题定位
+## Problem Identification

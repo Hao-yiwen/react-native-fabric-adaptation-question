@@ -3,6 +3,6 @@
 ## Intro
 
 - [Question by English](./Question-en.md)
-- [Question by Chinese](./Question-en.md)
+- [Question by Chinese](./Question-zh.md)
 
 ## Demo
