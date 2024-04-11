@@ -5,21 +5,19 @@ import {Navigation} from 'react-native-navigation';
 const Index = props => {
   return (
     <View style={styles.container}>
-      <View>
-        <Button
-          title="AnimatedOfMeasureLayoutInValid"
-          onPress={() =>
-            Navigation.push(props.componentId, {
-              component: {
-                name: 'AnimatedOfMeasureLayout',
-                passProps: {
-                  text: 'Pushed screen',
-                },
+      <Button
+        title="AnimatedOfMeasureLayoutInValid"
+        onPress={() =>
+          Navigation.push(props.componentId, {
+            component: {
+              name: 'AnimatedOfMeasureLayout',
+              passProps: {
+                text: 'Pushed screen',
               },
-            })
-          }
-        />
-      </View>
+            },
+          })
+        }
+      />
       <View style={{marginTop: 20}}>
         <Button
           title="FlatListStuckAndStopped"
@@ -59,6 +57,81 @@ const Index = props => {
                 name: 'ModalOverModal',
                 passProps: {
                   text: 'Pushed screen',
+                },
+              },
+            })
+          }
+        />
+      </View>
+      <View style={{marginTop: 20}}>
+        <Button
+          title="FlatlistInScrollview"
+          onPress={() =>
+            Navigation.push(props.componentId, {
+              component: {
+                name: 'FlatlistInScrollview',
+                passProps: {
+                  text: 'Pushed screen',
+                },
+              },
+            })
+          }
+        />
+      </View>
+      <View style={{marginTop: 20}}>
+        <Button
+          title="TextInputInvalid"
+          onPress={() =>
+            Navigation.push(props.componentId, {
+              component: {
+                name: 'TextInputInvalid',
+                passProps: {
+                  text: 'TextInputInvalid',
+                },
+              },
+            })
+          }
+        />
+      </View>
+      <View style={{marginTop: 20}}>
+        <Button
+          title="AnimatedTranslate"
+          onPress={() =>
+            Navigation.push(props.componentId, {
+              component: {
+                name: 'AnimatedTranslate',
+                passProps: {
+                  text: 'AnimatedTranslate',
+                },
+              },
+            })
+          }
+        />
+      </View>
+      <View style={{marginTop: 20}}>
+        <Button
+          title="TextInView"
+          onPress={() =>
+            Navigation.push(props.componentId, {
+              component: {
+                name: 'TextInView',
+                passProps: {
+                  text: 'TextInView',
+                },
+              },
+            })
+          }
+        />
+      </View>
+      <View style={{marginTop: 20}}>
+        <Button
+          title="StickyHeaderIndices"
+          onPress={() =>
+            Navigation.push(props.componentId, {
+              component: {
+                name: 'StickyHeaderIndices',
+                passProps: {
+                  text: 'StickyHeaderIndices',
                 },
               },
             })

@@ -78,6 +78,66 @@ const Index = props => {
           }
         />
       </View>
+      <View style={{marginTop: 20}}>
+        <Button
+          title="TextInputInvalid"
+          onPress={() =>
+            Navigation.push(props.componentId, {
+              component: {
+                name: 'TextInputInvalid',
+                passProps: {
+                  text: 'TextInputInvalid',
+                },
+              },
+            })
+          }
+        />
+      </View>
+      <View style={{marginTop: 20}}>
+        <Button
+          title="AnimatedTranslate"
+          onPress={() =>
+            Navigation.push(props.componentId, {
+              component: {
+                name: 'AnimatedTranslate',
+                passProps: {
+                  text: 'AnimatedTranslate',
+                },
+              },
+            })
+          }
+        />
+      </View>
+      <View style={{marginTop: 20}}>
+        <Button
+          title="TextInView"
+          onPress={() =>
+            Navigation.push(props.componentId, {
+              component: {
+                name: 'TextInView',
+                passProps: {
+                  text: 'TextInView',
+                },
+              },
+            })
+          }
+        />
+      </View>
+      <View style={{marginTop: 20}}>
+        <Button
+          title="StickyHeaderIndices"
+          onPress={() =>
+            Navigation.push(props.componentId, {
+              component: {
+                name: 'StickyHeaderIndices',
+                passProps: {
+                  text: 'StickyHeaderIndices',
+                },
+              },
+            })
+          }
+        />
+      </View>
     </View>
   );
 };
