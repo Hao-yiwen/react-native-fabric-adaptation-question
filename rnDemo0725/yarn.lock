@@ -3698,6 +3698,13 @@ hermes-profile-transformer@^0.0.6:
   dependencies:
     source-map "^0.7.3"
 
+hoist-non-react-statics@3.x.x:
+  version "3.3.2"
+  resolved "http://registry.npm.release.ctripcorp.com/hoist-non-react-statics/download/hoist-non-react-statics-3.3.2.tgz#ece0acaf71d62c2969c2ec59feff42a4b1a85b45"
+  integrity sha1-7OCsr3HWLClpwuxZ/v9CpLGoW0U=
+  dependencies:
+    react-is "^16.7.0"
+
 html-escaper@^2.0.0:
   version "2.0.2"
   resolved "http://registry.npm.release.ctripcorp.com/html-escaper/download/html-escaper-2.0.2.tgz#dfd60027da36a36dfcbe236262c00a5822681453"
@@ -4684,7 +4691,7 @@ lodash.throttle@^4.1.1:
   resolved "http://registry.npm.release.ctripcorp.com/lodash.throttle/download/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
   integrity sha1-wj6RtxAkKscMN/HhzaknTMOb8vQ=
 
-lodash@^4.17.21:
+lodash@4.17.x, lodash@^4.17.21:
   version "4.17.21"
   resolved "http://registry.npm.release.ctripcorp.com/lodash/download/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha1-Z5WRxWTDv/quhFTPCz3zcMPWkRw=
@@ -5775,7 +5782,7 @@ prompts@^2.0.1, prompts@^2.4.0:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@*, prop-types@^15.8.1:
+prop-types@*, prop-types@15.x.x, prop-types@^15.8.1:
   version "15.8.1"
   resolved "http://registry.npm.release.ctripcorp.com/prop-types/download/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha1-Z9h78aaU9IQ1zzMsJK8QIUoxQLU=
@@ -5824,7 +5831,7 @@ react-devtools-core@^4.27.2:
   resolved "http://registry.npm.release.ctripcorp.com/react-is/download/react-is-18.2.0.tgz#199431eeaaa2e09f86427efbb4f1473edb47609b"
   integrity sha1-GZQx7qqi4J+GQn77tPFHPttHYJs=
 
-react-is@^16.13.1:
+react-is@^16.13.1, react-is@^16.7.0:
   version "16.13.1"
   resolved "http://registry.npm.release.ctripcorp.com/react-is/download/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha1-eJcppNw23imZ3BVt1sHZwYzqVqQ=
@@ -5833,6 +5840,22 @@ react-is@^17.0.1:
   version "17.0.2"
   resolved "http://registry.npm.release.ctripcorp.com/react-is/download/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
   integrity sha1-5pHUqOnHiTZWVVOas3J2Kw77VPA=
+
+react-lifecycles-compat@2.0.0:
+  version "2.0.0"
+  resolved "http://registry.npm.release.ctripcorp.com/react-lifecycles-compat/download/react-lifecycles-compat-2.0.0.tgz#71d9c4cde47114c4102454f76da055c2bc48c948"
+  integrity sha1-cdnEzeRxFMQQJFT3baBVwrxIyUg=
+
+react-native-navigation@^7.38.4:
+  version "7.38.4"
+  resolved "http://registry.npm.release.ctripcorp.com/react-native-navigation/download/react-native-navigation-7.38.4.tgz#cc0d79705391658786dd5e4c2d210a90684128a9"
+  integrity sha1-zA15cFORZYeG3V5MLSEKkGhBKKk=
+  dependencies:
+    hoist-non-react-statics "3.x.x"
+    lodash "4.17.x"
+    prop-types "15.x.x"
+    react-lifecycles-compat "2.0.0"
+    tslib "1.9.3"
 
 react-native@0.72.5:
   version "0.72.5"
@@ -6568,6 +6591,11 @@ tr46@~0.0.3:
   version "0.0.3"
   resolved "http://registry.npm.release.ctripcorp.com/tr46/download/tr46-0.0.3.tgz#8184fd347dac9cdc185992f3a6622e14b9d9ab6a"
   integrity sha1-gYT9NH2snNwYWZLzpmIuFLnZq2o=
+
+tslib@1.9.3:
+  version "1.9.3"
+  resolved "http://registry.npm.release.ctripcorp.com/tslib/download/tslib-1.9.3.tgz#d7e4dd79245d85428c4d7e4822a79917954ca286"
+  integrity sha1-1+TdeSRdhUKMTX5IIqeZF5VMooY=
 
 tslib@^1.8.1:
   version "1.14.1"
