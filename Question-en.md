@@ -4,6 +4,70 @@
 
 - react-native@0.72.5
 
+- npx react-native info
+```
+System:
+  OS: macOS 14.2.1
+  CPU: (8) arm64 Apple M2
+  Memory: 113.95 MB / 16.00 GB
+  Shell:
+    version: "5.9"
+    path: /bin/zsh
+Binaries:
+  Node:
+    version: 18.19.0
+    path: ~/.nvm/versions/node/v18.19.0/bin/node
+  Yarn:
+    version: 1.22.19
+    path: ~/.nvm/versions/node/v18.19.0/bin/yarn
+  npm:
+    version: 10.2.3
+    path: ~/.nvm/versions/node/v18.19.0/bin/npm
+  Watchman:
+    version: 2023.12.04.00
+    path: /opt/homebrew/bin/watchman
+Managers:
+  CocoaPods: Not Found
+SDKs:
+  iOS SDK:
+    Platforms:
+      - DriverKit 23.0
+      - iOS 17.0
+      - macOS 14.0
+      - tvOS 17.0
+      - watchOS 10.0
+  Android SDK: Not Found
+IDEs:
+  Android Studio: 2023.2 AI-232.10300.40.2321.11567975
+  Xcode:
+    version: 15.0.1/15A507
+    path: /usr/bin/xcodebuild
+Languages:
+  Java:
+    version: 17.0.9
+    path: /usr/bin/javac
+  Ruby:
+    version: 3.2.0
+    path: /Users/yw.hao/.rvm/rubies/ruby-3.2.0/bin/ruby
+npmPackages:
+  "@react-native-community/cli": Not Found
+  react:
+    installed: 18.2.0
+    wanted: 18.2.0
+  react-native:
+    installed: 0.72.5
+    wanted: 0.72.5
+  react-native-macos: Not Found
+npmGlobalPackages:
+  "*react-native*": Not Found
+Android:
+  hermesEnabled: true
+  newArchEnabled: true
+iOS:
+  hermesEnabled: Not found
+  newArchEnabled: Not found
+```
+
 ## Background
 
 In early April 2024, the adaptation to the new architecture of React Native was undertaken, but some difficult issues were encountered during the adaptation process. This document is intended to record common issues with RN new architecture adaptation.
