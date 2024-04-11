@@ -15,6 +15,7 @@ Navigation.registerComponent(
   () => require('./src/pages/FlatListStuckAndStopped').default,
 );
 
+
 Navigation.events().registerAppLaunchedListener(() => {
   Navigation.setRoot({
     root: {

@@ -1,11 +1,7 @@
 package com.rndemo0725;
 
 import android.app.Application;
-
-import androidx.annotation.Nullable;
-
 import com.facebook.react.PackageList;
-import com.facebook.react.devsupport.DevSupportManagerFactory;
 import com.reactnativenavigation.NavigationApplication;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;

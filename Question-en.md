@@ -5,6 +5,7 @@
 - react-native@0.72.5
 
 - npx react-native info
+
 ```
 System:
   OS: macOS 14.2.1
@@ -108,5 +109,3 @@ In early April 2024, the adaptation to the new architecture of React Native was 
 | 30  | Animated.View, Animated.ScrollView, `layoutAnimation` animation stuttering                                                              |           |             |
 | 31  | Android FlatList calling `scrollToOffset`, FlatList scrolling stuttering.                                                               |           |             |
 | 32  | `maxLength` attribute of TextInput not effective on Android                                                                             |           |             |
-
-## Problem Identification

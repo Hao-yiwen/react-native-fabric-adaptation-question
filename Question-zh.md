@@ -108,5 +108,3 @@ iOS:
 | 30   | Aminated.View 、Animated.ScrollView 、layoutAnimation 动画卡顿                                                                               |           |      |
 | 31   | 安卓 FlatList 调用 scrollToOffset，flatList 滚动卡顿。                                                                                       |           |      |
 | 32   | TextInput 属性 maxLength 在 android 上不生效                                                                                                 |           |      |
-
-## 问题定位

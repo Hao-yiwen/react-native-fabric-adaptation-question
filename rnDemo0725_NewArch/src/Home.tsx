@@ -5,21 +5,19 @@ import {Navigation} from 'react-native-navigation';
 const Index = props => {
   return (
     <View style={styles.container}>
-      <View>
-        <Button
-          title="AnimatedOfMeasureLayoutInValid"
-          onPress={() =>
-            Navigation.push(props.componentId, {
-              component: {
-                name: 'AnimatedOfMeasureLayout',
-                passProps: {
-                  text: 'Pushed screen',
-                },
+      <Button
+        title="AnimatedOfMeasureLayoutInValid"
+        onPress={() =>
+          Navigation.push(props.componentId, {
+            component: {
+              name: 'AnimatedOfMeasureLayout',
+              passProps: {
+                text: 'Pushed screen',
               },
-            })
-          }
-        />
-      </View>
+            },
+          })
+        }
+      />
       <View style={{marginTop: 20}}>
         <Button
           title="FlatListStuckAndStopped"
