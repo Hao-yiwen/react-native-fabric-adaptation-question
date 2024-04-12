@@ -50,6 +50,21 @@ Navigation.registerComponent(
   () => require('./src/pages/StickyHeaderIndices').default,
 );
 
+Navigation.registerComponent(
+  'LayoutAnimation',
+  () => require('./src/pages/LayoutAnimation').default,
+);
+
+Navigation.registerComponent(
+  'AnimatedBackgroundColor',
+  () => require('./src/pages/AnimatedBackgroundColor').default,
+);
+
+Navigation.registerComponent(
+  'AnimatedDriverJsOrNative',
+  () => require('./src/pages/AnimatedDriverJsOrNative').default,
+);
+
 Navigation.events().registerAppLaunchedListener(() => {
   Navigation.setRoot({
     root: {
