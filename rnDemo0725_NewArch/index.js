@@ -65,6 +65,11 @@ Navigation.registerComponent(
   () => require('./src/pages/AnimatedDriverJsOrNative').default,
 );
 
+Navigation.registerComponent(
+  'TabScrollview',
+  () => require('./src/pages/TabScrollview').default,
+);
+
 Navigation.events().registerAppLaunchedListener(() => {
   Navigation.setRoot({
     root: {
