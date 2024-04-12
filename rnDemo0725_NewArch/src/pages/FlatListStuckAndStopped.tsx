@@ -116,12 +116,12 @@ const FlatListDemo = React.forwardRef((props, flatListRef) => {
       Animated.timing(opacityValue, {
         toValue: 1,
         duration: 5000,
-        useNativeDriver: true,
+        useNativeDriver: false,
       }),
       Animated.timing(scaleValue, {
         toValue: 1,
         duration: 5000,
-        useNativeDriver: true,
+        useNativeDriver: false,
       }),
     ]).start();
   }, [opacityValue, scaleValue]);
@@ -184,7 +184,7 @@ const FlatListDemo = React.forwardRef((props, flatListRef) => {
               onPress={() => {
                 flatListRef.current.scrollToOffset({
                   offset: 1000,
-                  animated: true,
+                  animated: false,
                 });
               }}
             />

@@ -12,22 +12,22 @@ const Index: React.FC = () => {
   const translateX = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
-    Animated.loop(
-      Animated.sequence([
-        Animated.timing(translateX, {
-          toValue: 100,
-          duration: 2000,
-          useNativeDriver: true,
-        }),
-        Animated.spring(translateX, {
-          toValue: 0,
-          friction: 9,
-          tension: 10,
-          useNativeDriver: true,
-        }),
-      ]),
-    ).start();
-    console.log('translateX', translateX);
+    // Animated.loop(
+    Animated.sequence([
+      Animated.timing(translateX, {
+        toValue: 100,
+        duration: 2000,
+        useNativeDriver: true,
+      }),
+      // Animated.spring(translateX, {
+      //   toValue: 0,
+      //   friction: 9,
+      //   tension: 10,
+      //   useNativeDriver: true,
+      // }),
+    ]).start(),
+      // ).start();
+      console.log('translateX', translateX);
   }, [translateX]);
 
   return (

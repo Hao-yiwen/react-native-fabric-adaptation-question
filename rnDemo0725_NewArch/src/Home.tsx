@@ -138,6 +138,51 @@ const Index = props => {
           }
         />
       </View>
+      <View style={{marginTop: 20}}>
+        <Button
+          title="LayoutAnimation"
+          onPress={() =>
+            Navigation.push(props.componentId, {
+              component: {
+                name: 'LayoutAnimation',
+                passProps: {
+                  text: 'LayoutAnimation',
+                },
+              },
+            })
+          }
+        />
+      </View>
+      <View style={{marginTop: 20}}>
+        <Button
+          title="AnimatedBackgroundColor"
+          onPress={() =>
+            Navigation.push(props.componentId, {
+              component: {
+                name: 'AnimatedBackgroundColor',
+                passProps: {
+                  text: 'AnimatedBackgroundColor',
+                },
+              },
+            })
+          }
+        />
+      </View>
+      <View style={{marginTop: 20}}>
+        <Button
+          title="AnimatedDriverJsOrNative"
+          onPress={() =>
+            Navigation.push(props.componentId, {
+              component: {
+                name: 'AnimatedDriverJsOrNative',
+                passProps: {
+                  text: 'AnimatedDriverJsOrNative',
+                },
+              },
+            })
+          }
+        />
+      </View>
     </View>
   );
 };
