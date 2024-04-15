@@ -4,6 +4,7 @@
 
 import {Navigation} from 'react-native-navigation';
 import Home from './src/Home';
+import { NativeModules } from 'react-native';
 
 Navigation.registerComponent('Home', () => Home);
 Navigation.registerComponent(
@@ -63,6 +64,16 @@ Navigation.registerComponent(
 Navigation.registerComponent(
   'AnimatedDriverJsOrNative',
   () => require('./src/pages/AnimatedDriverJsOrNative').default,
+);
+
+Navigation.registerComponent(
+  'TabScrollview',
+  () => require('./src/pages/TabScrollview').default,
+);
+
+Navigation.registerComponent(
+  'ManyElements',
+  () => require('./src/pages/ManyElements').default,
 );
 
 Navigation.events().registerAppLaunchedListener(() => {

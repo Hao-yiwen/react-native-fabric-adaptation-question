@@ -1,10 +1,10 @@
 import React from 'react';
-import {View, Text, StyleSheet, Button} from 'react-native';
+import {View, Text, StyleSheet, Button, ScrollView} from 'react-native';
 import {Navigation} from 'react-native-navigation';
 
 const Index = props => {
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <Button
         title="AnimatedOfMeasureLayoutInValid"
         onPress={() =>
@@ -183,7 +183,35 @@ const Index = props => {
           }
         />
       </View>
-    </View>
+      <View style={{marginTop: 20}}>
+        <Button
+          title="TabScrollview"
+          onPress={() => {
+            Navigation.push(props.componentId, {
+              component: {
+                name: 'TabScrollview',
+                passProps: {
+                  text: 'TabScrollview',
+                },
+              },
+            });
+          }}></Button>
+      </View>
+      <View style={{marginTop: 20}}>
+        <Button
+          title="ManyElements"
+          onPress={() => {
+            Navigation.push(props.componentId, {
+              component: {
+                name: 'ManyElements',
+                passProps: {
+                  text: 'ManyElements',
+                },
+              },
+            });
+          }}></Button>
+      </View>
+    </ScrollView>
   );
 };
 
@@ -199,8 +227,8 @@ Index.options = {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    // justifyContent: 'center',
+    // alignItems: 'center',
   },
 });
 
