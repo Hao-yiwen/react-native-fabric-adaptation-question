@@ -197,6 +197,20 @@ const Index = props => {
             });
           }}></Button>
       </View>
+      <View style={{marginTop: 20}}>
+        <Button
+          title="ManyElements"
+          onPress={() => {
+            Navigation.push(props.componentId, {
+              component: {
+                name: 'ManyElements',
+                passProps: {
+                  text: 'ManyElements',
+                },
+              },
+            });
+          }}></Button>
+      </View>
     </ScrollView>
   );
 };
