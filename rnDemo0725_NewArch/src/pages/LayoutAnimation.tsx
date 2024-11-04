@@ -1,3 +1,6 @@
+/**
+ * @description 当时记得是在072的新架构存在性能问题
+ */
 import React, {useRef, useState} from 'react';
 import {
   Animated,
@@ -40,7 +43,7 @@ const App = () => {
             },
           ],
           {
-            useNativeDriver: false,
+            useNativeDriver: true,
           },
         )}
         style={{

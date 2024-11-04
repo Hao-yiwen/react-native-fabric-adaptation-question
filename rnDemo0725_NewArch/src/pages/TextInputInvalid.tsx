@@ -1,9 +1,12 @@
+/**
+ * @deprecated 长度限制不生效
+ */
 import React from 'react';
 import {View, Text, TextInput} from 'react-native';
 
 const Index = () => {
   return (
-    <View>
+    <View style={{justifyContent: 'center', flex: 1}}>
       <TextInput
         maxLength={10}
         placeholder="useless placeholder"

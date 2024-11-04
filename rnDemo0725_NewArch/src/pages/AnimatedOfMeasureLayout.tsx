@@ -1,3 +1,6 @@
+/** 
+ * @description: 新架构不能使用findNodeHandle
+*/
 import React, {useRef} from 'react';
 import {
   View,
@@ -8,7 +11,6 @@ import {
   findNodeHandle,
   Dimensions,
 } from 'react-native';
-import {Navigation} from 'react-native-navigation';
 
 const Index: React.FC = () => {
   const scrollViewRef = useRef(null);
@@ -24,7 +26,9 @@ const Index: React.FC = () => {
 
     if (scrollViewNode && targetViewNode) {
       targetViewRef.current.measureLayout(
-        scrollViewNode,
+        // 新架构直接使用ref
+        scrollViewRef.current,
+        // scrollViewNode,
         (left, top, width, height) => {
           // 使用得到的top位置来滚动到目标视图
           console.log('top:', top, 'height:', height);

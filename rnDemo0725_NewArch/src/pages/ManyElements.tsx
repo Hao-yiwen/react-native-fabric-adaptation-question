@@ -1,3 +1,6 @@
+/**
+ * @description 此demo在rn072 new arch存在性能问题
+ */
 import React, {useState} from 'react';
 import {
   View,

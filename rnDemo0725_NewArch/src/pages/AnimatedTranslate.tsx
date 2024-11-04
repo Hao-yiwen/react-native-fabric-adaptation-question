@@ -1,3 +1,7 @@
+/**
+ * @description: AnimatedTranslate
+ * 072新架构在动画移动后的地方不能点击
+ */
 import React, {useEffect, useRef} from 'react';
 import {
   View,

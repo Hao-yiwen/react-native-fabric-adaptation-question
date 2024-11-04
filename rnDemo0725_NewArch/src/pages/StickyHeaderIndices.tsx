@@ -1,3 +1,6 @@
+/**
+ * @description 072新架构中StickyHeaderComponent貌似不生效 需要再验证一下
+ */
 import React from 'react';
 import {
   View,

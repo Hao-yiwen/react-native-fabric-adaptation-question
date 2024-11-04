@@ -1,3 +1,6 @@
+/**
+ * @description Flatlist在scrollview中无法进行点击
+ */
 import React from 'react';
 import {
   View,

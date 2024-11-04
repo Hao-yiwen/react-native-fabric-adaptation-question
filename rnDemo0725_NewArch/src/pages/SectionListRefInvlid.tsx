@@ -1,3 +1,9 @@
+/**
+ * @description 复现路径 滚动到底部 然后点击按钮 旧架构可以滚动到顶部 新架构不行
+ * 
+ * 按照官方文档的意思使用ref能够替代 但是目前替换为ref也不行 需要找替代写法
+ */
+
 import React, {useRef} from 'react';
 import {
   StyleSheet,
@@ -131,6 +137,7 @@ const App = () => {
         onPress={() => {
           titleRef.current.measureLayout(
             findNodeHandle(sectionListRef.current),
+            // sectionListRef.current,
             (x, y, width, height) => {
               console.log('x:', x, 'y:', y, 'width:', width, 'height:', height);
               sectionListRef.current.scrollToLocation({

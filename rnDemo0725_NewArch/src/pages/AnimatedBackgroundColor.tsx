@@ -1,3 +1,8 @@
+
+/**
+ * @description: AnimatedBackgroundColor
+ * 在旧架构上颜色插值可以用原生驱动 但是076上不能用原生驱动 （rn官方的意思是不应该给背景动画使用原生驱动）
+ */
 import React from 'react';
 import {
   View,

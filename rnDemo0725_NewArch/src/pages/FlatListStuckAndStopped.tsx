@@ -1,3 +1,8 @@
+/**
+ * @description 动画卡顿 072性能很差
+ * 
+ * 目前背景颜色插值还是有问题 但是性能明显好了
+ */
 import React, {useEffect, useRef, useState} from 'react';
 import {
   View,
